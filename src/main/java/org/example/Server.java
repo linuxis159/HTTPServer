@@ -15,6 +15,8 @@ public class Server {
             while(!serverSocket.isClosed()){
 
                 Socket socket = serverSocket.accept();
+
+                System.out.println("address : " +  socket.getRemoteSocketAddress());
                 System.out.println("A new Clinet has connected");
 
                 ClientHandler clientHandler = new ClientHandler(socket);

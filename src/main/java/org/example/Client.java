@@ -77,7 +77,7 @@ public class Client {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your username for thoe group chat: ");
         String username = scanner.nextLine();
-        Socket socket = new Socket("localhost",6060);
+        Socket socket = new Socket("192.168.200.107",6060);
         Client clinet = new Client(socket, username);
         clinet.listenForMesssage();
         clinet.sendMessage();
